@@ -5,3 +5,5 @@ _site/
 .ipynb_checkpoints
 slides/
 _includes/notes.txt
+# Local Netlify folder
+.netlify
