@@ -1,6 +1,6 @@
 ---
 layout: page
-title: C4M Schedule for the MD Program
+title: Schedule for the T-CAIREM Computing in Medicine Professional Development Course
 hide: true
 ---
 

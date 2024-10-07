@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Module 2 – Data Science
+title: Part 2 – Data Science
 icon: fa-house
 order: 3
 ---

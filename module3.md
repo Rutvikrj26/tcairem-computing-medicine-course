@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Module 3 – Machine Learning
+title: Part 3 – Machine Learning
 icon: fa-house
 order: 4
 ---

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Module 1 – Basic Programming
+title: Part 1 – Basic Programming
 icon: fa-house
 order: 2
 ---
