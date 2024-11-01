@@ -1,0 +1,127 @@
+<!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+
+<!-- Add Firebase Authentication -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+<!-- Add Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyD7iorrM5kTpqvFf_aIb6rQxtr9RUxNHeo",
+      authDomain: "tcairem-medicine-computing.firebaseapp.com",
+      projectId: "tcairem-medicine-computing",
+      storageBucket: "tcairem-medicine-computing.firebasestorage.app",
+      messagingSenderId: "384847110903",
+      appId: "1:384847110903:web:f24a6d069c78d2973269f2",
+      measurementId: "G-50CWXRS1TT"
+    };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  // Global variables to store user information and auth state
+  let currentUser = null;
+  let authStateKnown = false;
+
+  // Create a promise that resolves when the auth state is known
+  const authStatePromise = new Promise((resolve) => {
+    auth.onAuthStateChanged((user) => {
+      currentUser = user;
+      authStateKnown = true;
+      updateAuthUI(user);
+      resolve(user);
+    });
+  });
+
+  // Function to update UI elements based on authentication state
+  function updateAuthUI(user) {
+    const logoutButton = document.getElementById('logout-button');
+    const userEmailSpan = document.getElementById('user-email');
+
+    if (user) {
+      // User is signed in
+      if (logoutButton) {
+        logoutButton.style.display = 'block';
+      }
+      if (userEmailSpan) {
+        userEmailSpan.textContent = user.email;
+        userEmailSpan.style.display = 'block';
+      }
+    } else {
+      // No user is signed in
+      if (logoutButton) {
+        logoutButton.style.display = 'none';
+      }
+      if (userEmailSpan) {
+        userEmailSpan.style.display = 'none';
+      }
+    }
+  }
+
+  // Function to check authentication state
+  function checkAuth() {
+    return authStatePromise.then((user) => {
+      if (user) {
+        return user;
+      } else {
+        // No user is signed in, redirect to login page
+        window.location.href = '/login.html';
+        throw new Error('No user signed in');
+      }
+    });
+  }
+
+  // Function to check module access
+  async function checkModuleAccess(moduleNumber) {
+    try {
+      const user = await checkAuth();
+
+      // printing the result of the await checkAuth() function
+        console.log(user);
+
+      const userId = user.uid;
+      const userDoc = await db.collection('users').doc(userId).get();
+
+      if (userDoc.exists) {
+        const userData = userDoc.data();
+        if (userData.modules && userData.modules.includes(moduleNumber)) {
+          // User has access to the module
+          document.getElementById('module-content').style.display = 'block';
+        } else {
+          alert('You do not have access to this module.');
+          window.location.href = '/';
+        }
+      } else {
+        console.error('No user data found!');
+        auth.signOut();
+        window.location.href = '/login.html';
+      }
+    } catch (error) {
+      console.error('Error checking module access:', error);
+    }
+  }
+
+  // Logout functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const logoutButton = document.getElementById('logout-button');
+
+    if (logoutButton) {
+      logoutButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        auth.signOut()
+          .then(() => {
+            // Sign-out successful.
+            window.location.href = '/login.html';
+          })
+          .catch((error) => {
+            console.error('Error signing out:', error);
+          });
+      });
+    }
+  });
+</script>

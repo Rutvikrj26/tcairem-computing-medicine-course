@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Part 2 – Data Science
+title: Course 2 – Data Science
 icon: fa-house
 order: 3
 ---
@@ -12,3 +12,7 @@ order: 3
 - To learn how to generate useful visualizations using the `matplotlib` library
 
 {% include lecture_table.html lectures=site.module2 %}
+<script>
+  // Check if the user has access to Module 1
+  checkModuleAccess(2);
+</script>

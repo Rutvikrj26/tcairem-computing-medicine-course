@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Part 3 – Machine Learning
+title: Course 3 – Machine Learning
 icon: fa-house
 order: 4
 ---
@@ -13,3 +13,7 @@ order: 4
 **IMPORTANT:** This module focuses on "traditional" machine learning models like logistic regressors and random forest classifiers. It does not cover state-of-the-art deep learning like large language models (LLMs) or foundational models. However, the last lecture will show how the concepts covered in this module are prerequisite for these advanced model architectures.
 
 {% include lecture_table.html lectures=site.module3 %}
+<script>
+  // Check if the user has access to Module 1
+  checkModuleAccess(3);
+</script>
