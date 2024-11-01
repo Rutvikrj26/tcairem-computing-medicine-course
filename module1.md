@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Part 1 – Basic Programming
+title: Course 1 – Basic Programming
 icon: fa-house
 order: 2
 ---
@@ -11,3 +11,7 @@ order: 2
 - To learn how to implement good practices in software design (e.g., conventional naming standards, modular design)
 
 {% include lecture_table.html lectures=site.module1 %}
+<script>
+  // Check if the user has access to Module 1
+  checkModuleAccess(1);
+</script>

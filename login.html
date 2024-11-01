@@ -1,0 +1,38 @@
+---
+layout: page
+title: Login
+---
+
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="login-form">
+    <input type="email" id="email" placeholder="Email" required />
+    <br />
+    <input type="password" id="password" placeholder="Password" required />
+    <br />
+    <button type="submit">Login</button>
+  </form>
+
+  <!-- Your custom JavaScript code -->
+  <script>
+    document.getElementById('login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      auth.signInWithEmailAndPassword(email, password)
+        .then(() => {
+          // Redirect to the index page after successful login
+          window.location.href = '/';
+        })
+        .catch((error) => {
+          console.error('Authentication error:', error);
+          alert('Authentication error: ' + error.message);
+        });
+    });
+  </script>
+</body>
+</html>

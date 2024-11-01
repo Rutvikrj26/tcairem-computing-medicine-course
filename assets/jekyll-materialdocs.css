@@ -66,6 +66,38 @@ table, th, td {
   color: #C1C2C3;
 }
 
+/* Position the header relative to allow absolute positioning of child elements */
+#header {
+  position: relative;
+}
+
+/* Style the logout container */
+#logout-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#user-email {
+  color: #fff;
+}
+
+/* Style the logout button */
+#logout-button {
+  display: none; /* Hidden by default */
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Optional: Hover effect for the logout button */
+#logout-button:hover {
+  background-color: #555;
+}
+
 
 .highlight { background-color: #202020 }
 .highlight .c { color: #75715e } /* Comment */
