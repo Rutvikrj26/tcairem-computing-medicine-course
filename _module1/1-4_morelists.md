@@ -5,7 +5,7 @@ materials:
 - topic: "Parallel Sequences"
   files: 
   - type: "colab"
-    url: lectures/module1/1-4_morelists/1-4a – Parallel_ 
+    url: lectures/module1/1-4_morelists/1-4a – Parallel Sequences.ipynb 
   - type: "video"
     url: "https://youtu.be/PhOHkWXAy9Y"
 - topic: "Nested Lists and Loops"
