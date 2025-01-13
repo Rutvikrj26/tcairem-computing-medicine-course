@@ -20,7 +20,9 @@ This content may be offered through multiple concurrent programs at any given ti
 
 [//]: # (- **Lectures:** Select Wednesdays 12-2:30 PM &#40;[schedule]&#40;schedules/c4m-md.html&#41;&#41;)
 
-[//]: # (- **Instructor:** [Alex Mariakakis]&#40;https://mariakakis.github.io/&#41;)
+- **Instructor:** [Alex Mariakakis](https://mariakakis.github.io/) [Intro](https://youtu.be/GReRl3HmwRg)
+
+- **Tools:** [Google Colab](https://youtu.be/C-IiSg4pUoI)
 
 [//]: # (- **Instructor Office Hours:** Mondays 5-6 PM &#40;Zoom link in Quercus&#41;)
 
@@ -28,5 +30,6 @@ This content may be offered through multiple concurrent programs at any given ti
 
 [//]: # (- **Teaching Assistant Office Hours:** Mondays 10:30–11:30 AM &#40;Zoom link in Quercus&#41;)
 
-### Course Details, Jan 2025 – Aug 2025
-Details to be announced
+[//]: # (### Course Details, Jan 2025 – Aug 2025)
+
+[//]: # (Details to be announced)
