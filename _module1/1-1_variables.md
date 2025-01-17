@@ -23,13 +23,13 @@ materials:
 - topic: "Functions"
   files:
   - type: "colab"
-    url: lectures/module1/1-1_variables/1-1d – Functions.ipynb
+    url: lectures/module1/1-1_variables/1-1e – Functions.ipynb
   - type: "video"
     url: "https://youtu.be/xhQFvhFFH1g"
 - topic: "Type Conversion"
   files:
   - type: "colab"
-    url: lectures/module1/1-1_variables/1-1e – Type Conversion.ipynb
+    url: lectures/module1/1-1_variables/1-1d – Type Conversion.ipynb
   - type: "video"
     url: "https://youtu.be/6yjaGmLsfZk"
 - topic: "Input and Output"
