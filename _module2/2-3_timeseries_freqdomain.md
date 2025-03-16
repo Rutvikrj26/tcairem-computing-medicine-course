@@ -37,7 +37,7 @@ materials:
   - type: "colab"
     url: lectures/module2/2-3_timeseries_frequencydomain/2-3f – Digital Filters.ipynb
   - type: "video"
-    url: "https://youtu.be/xl64KIuyREs?si=h69DcvsxZoOBk2Ey"
+    url: "https://youtu.be/ALntyKyiKxo?si=CdRStVBGy9q0NqOY"
 assignment:
   files:
   - type: "colab"
